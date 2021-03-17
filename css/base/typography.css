@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Alata';
+  src: url("../../font/Alata-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Josefine Sans';
+  src: url("../../font/static/JosefinSans-Light.ttf");
+  font-weight: 300;
+}
+/*# sourceMappingURL=typography.css.map */

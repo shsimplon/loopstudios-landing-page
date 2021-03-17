@@ -1,0 +1,172 @@
+                @import'../layout/mobile.scss';
+                @import'./helpers/mixins.scss';
+                @import'./helpers/color.scss';
+                @import'./helpers/color';
+                @import'./base/typography.scss';
+                @media (max-width: 900px) {
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    section {
+                        margin-bottom: $section;
+                    }
+                    body {
+                        font-family: $font-family_Josefine;
+                        scroll-behavior: smooth;
+                        font-size: clamp(18px, 10vw, 48px);
+                    }
+                    img {
+                        width: 100%;
+                    }
+                    #about {
+                        background: no-repeat url("../images/mobile/image-hero.jpg");
+                        height: auto;
+                        min-height: 750px;
+                        width: 100%;
+                        @include colunm;
+                        justify-content: space-around;
+                    }
+                    #about>h1 {
+                        color: $white;
+                        border: 2px solid white;
+                        height: 50%;
+                        width: 100%;
+                        text-align: center;
+                        font-size: 48px;
+                        font-family: $font-family_Alata;
+                        font-weight: lighter;
+                        display: flex;
+                        align-items: center;
+                    }
+                    nav>a {
+                        color: blanchedalmond;
+                        text-decoration: none;
+                        font-size: $nav;
+                    }
+                    header {
+                        @include flex;
+                        padding: 5%;
+                    }
+                    article>h1 {
+                        font-size: $h1;
+                        font-weight: lighter;
+                        text-align: center;
+                        padding: 20% 0 10% 0;
+                    }
+                    p {
+                        font-size: 24px;
+                        text-align: center;
+                        color: hsl(0, 0%, 41%);
+                        line-height: 40px;
+                        font-weight: bold;
+                    }
+                    figure {
+                        position: relative;
+                        padding-bottom: 25px;
+                    }
+                    figcaption {
+                        position: absolute;
+                        top: 50px;
+                        left: 40px;
+                        color: $white;
+                        font-size: 24px;
+                    }
+                    #events>h1 {
+                        font-size: 36px;
+                        text-align: center;
+                        padding-bottom: 15%;
+                    }
+                    .button-see-all {
+                        @include center;
+                    }
+                    .button-see-all>button {
+                        width: 50%;
+                        font-size: 24px;
+                        background: $background;
+                        border: 3px solid black;
+                        padding: 4%;
+                    }
+                    // burger
+                    nav {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100vh;
+                        background: black;
+                        @include colunm;
+                        justify-content: center;
+                        gap: 50px;
+                        transform: translateX(100%);
+                        transition: 0.5s;
+                    }
+                    header {
+                        display: flex;
+                        gap: 40px;
+                    }
+                    .menu-open {
+                        transform: translateX(0);
+                    }
+                    nav a {
+                        margin-left: 5%;
+                        font-size: 24px;
+                    }
+                    // .burger,
+                    // header>a {
+                    //     z-index: 100;
+                    // }
+                    .burger {
+                        display: block;
+                        cursor: pointer;
+                    }
+                    .burger span {
+                        margin: 6px 0;
+                        width: 40px;
+                        height: 5px;
+                        background: #FFFFFF;
+                        border-radius: 54px;
+                        display: block;
+                        transition: 0.5s;
+                    }
+                    .burger-cross span:first-child {
+                        transform: rotate(45deg) translate(7px, 8px);
+                    }
+                    .burger-cross span:last-child {
+                        transform: rotate(-45deg) translate(7px, -8px);
+                    }
+                    .burger-cross span:nth-child(2) {
+                        opacity: 0;
+                    }
+                }
+                
+                // footer
+                footer,
+                .div-liens {
+                    background: black;
+                    min-height: 200px;
+                    align-items: center;
+                    @include colunm;
+                    gap: 25px;
+                }
+                
+                .div-liens a {
+                    text-decoration: none;
+                    color: white;
+                }
+                
+                .reseau-sociaux-items {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 25px;
+                }
+                
+                footer>a>img {
+                    width: 92%;
+                    padding-top: 20%;
+                }
+                
+                footer {
+                    padding-bottom: 20%;
+                }

@@ -1,0 +1,16 @@
+$h1:36px;
+$nav:18px;
+@font-face {
+    font-family: 'Alata';
+    src: url('../../font/Alata-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Josefine Sans';
+    src: url('../../font/static/JosefinSans-Light.ttf');
+    font-weight: 300;
+}
+
+$font-family_Josefine:'Josefine Sans';
+$font-family_Alata:'Alata';
